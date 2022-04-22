@@ -36,7 +36,7 @@ chmod +x install.sh
 
 ## 🎈 Usage <a name="usage"></a>
 ```
-usage: codice.py [-h] [-c CRYPT] [-a APP] [-u USER] [-l LEN] [-o OUT]
+usage: codice [-h] [-c CRYPT] [-a APP] [-u USER] [-l LEN] [-o OUT]
 
 optional arguments:
   -h, --help            show this help message and exit

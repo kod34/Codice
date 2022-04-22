@@ -8,8 +8,10 @@ from mods.args import *
         
 def decrypt_f():
     print(color.BLUE+"+ Decrypting "+outf+"..."+color.END)
-    cmd = subprocess.run(['gpg', outf], capture_output=True).stdout.decode()
-    print(cmd)
+    try:
+        subprocess.check_output(['gpg', outf], stderr=subprocess.STDOUT)
+    except subprocess.CalledProcessError:
+        sys.exit(color.RED+"\n! Exiting..."+color.END)
     
 def gen_pass():
     global password
@@ -28,8 +30,14 @@ def store():
 
 def crypt_f():
     print(color.BLUE+"+ Encrypting "+os.path.splitext(outf)[0]+"..."+color.END)
-    cmd = subprocess.run(['gpg', '-c', '-crypt-algo='+str(crypt), os.path.splitext(outf)[0]], capture_output=True).stdout.decode()
-    os.remove(os.path.splitext(outf)[0])
-    print(cmd)
+    try:
+        subprocess.check_output(['gpg', '-c', '-crypt-algo='+str(crypt), os.path.splitext(outf)[0]],
+    stderr=subprocess.STDOUT)
+    except subprocess.CalledProcessError:
+        sys.exit(color.RED+"\n! Exiting..."+color.END)
+    try:
+        os.remove(os.path.splitext(outf)[0])
+    except:
+        pass
 
 
