@@ -2,7 +2,7 @@
 
 ---
 
-<p align="center"> Codice is a tool that generates a random password for your account, stores it in a password file and encrypts the file with an encryption of algorithm of your choosing.
+<p align="center"> Codice is a tool that generates a random password for your account, stores it in a password file and encrypts the file with an encryption algorithm of your choosing.
     <br> 
 </p>
 
@@ -12,13 +12,9 @@
 - [Usage](#usage)
 - [Authors](#authors)
 
-## 🧐 About <a name = "about"></a>
-
-Write about 1-2 paragraphs describing the purpose of your project.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
@@ -29,15 +25,15 @@ GnuPG
 ```
 cd Codice/
 ```
-
+```
 chmod +x install.sh
-
+```
 ```
 ./install.sh
 ```
 
 ## 🎈 Usage <a name="usage"></a>
-
+```
 usage: codice.py [-h] [-c CRYPT] [-a APP] [-u USER] [-l LEN] [-o OUT]
 
 optional arguments:
@@ -50,7 +46,7 @@ required named arguments:
   -u USER, --user USER  Username associated with the generated password
   -l LEN, --len LEN     Generated password length
   -o OUT, --out OUT     Output file
-
+```
 ## ✍️ Authors <a name = "authors"></a>
 
 - [@kod34](https://github.com/kod34)
