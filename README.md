@@ -18,7 +18,9 @@
 
 ### Prerequisites
 
-GnuPG
+- Python
+- Linux
+- GnuPG
 
 ### Installing
 
