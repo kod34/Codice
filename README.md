@@ -25,12 +25,9 @@
 ### Installing
 
 ```
+git clone https://github.com/kod34/Codice
 cd Codice/
-```
-```
 chmod +x install.sh
-```
-```
 ./install.sh
 ```
 
