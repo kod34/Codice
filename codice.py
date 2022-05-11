@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 import os
-import random
-import shutil
 from mods.functions import *
-import mods.functions as fu
 from mods.args import *
 
 crypt_list = ['RSA','ELG','DSA','ECDH','ECDSA','EDDSA','IDEA','3DES','CAST5','BLOWFISH','AES','AES192','AES256','TWOFISH','CAMELLIA128','CAMELLIA192','CAMELLIA256']
