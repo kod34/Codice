@@ -14,13 +14,6 @@ if args.crypt != None and args.user != None and args.app != None and args.len !=
         sys.exit(color.RED+str(e))
     print(banner)
     
-    # if os.path.exists(outf):
-    #     shutil.copyfile(outf, outf+'.backup'+str(random.randint(1,99)))
-        
-    # if os.path.exists(outf+'.gpg'):
-    #     shutil.copyfile(outf+'.gpg', outf+'.gpg.backup'+str(random.randint(1,999)))
-    
-        
     if '.gpg' == os.path.splitext(outf)[1]:
         if not os.path.exists(outf):
             sys.exit(color.RED+"[-] Invalid path")

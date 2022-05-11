@@ -1,6 +1,5 @@
 import subprocess
 import os
-from unicodedata import digit
 import random
 import string
 from mods.colors import *
@@ -46,5 +45,3 @@ def crypt_f():
         os.remove(os.path.splitext(outf)[0])
     except:
         pass
-
-
