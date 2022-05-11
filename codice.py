@@ -36,7 +36,7 @@ if args.crypt != None and args.user != None and args.app != None and args.len !=
         store()
         crypt_f()
         
-    print(color.GREEN+"[*] Password saved to "+os.path.splitext(outf)[0]+'.gpg')
+    print(color.GREEN+"[*] Password saved to "+color.YELLOW+os.path.splitext(outf)[0]+'.gpg')
 
 else:
     parser.error("A required argument is missing")
