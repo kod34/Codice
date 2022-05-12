@@ -2,11 +2,13 @@ import subprocess
 import os
 import random
 import string
+import time
 from mods.colors import *
 from mods.args import *
         
 def decrypt_f():
     print(color.BLUE+"Decrypting "+color.YELLOW+outf+"..."+color.END)
+    time.sleep(1)
     try:
         subprocess.call(['gpgconf', '--kill', 'gpg-agent'])
         subprocess.check_output(['gpg', outf], stderr=subprocess.STDOUT)
@@ -17,6 +19,7 @@ def decrypt_f():
 def gen_pass():
     global password
     print(color.BLUE+"Generating random password of size "+color.YELLOW+plen+"..."+color.END)
+    time.sleep(1)
     password = ''
     source = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
     pass_list = list(source)
@@ -28,6 +31,7 @@ def gen_pass():
 
 def store():
     print(color.BLUE+"Storing data in "+color.YELLOW+os.path.splitext(outf)[0]+"..."+color.END)
+    time.sleep(1)
     new_line = "\t-"+(str(app)).upper()+':\n'+str(user)+':'+str(password)
     with open(os.path.splitext(outf)[0], 'a') as o:
         o.write(new_line+'\n')
@@ -35,6 +39,7 @@ def store():
 
 def crypt_f():
     print(color.BLUE+"Encrypting "+color.YELLOW+os.path.splitext(outf)[0]+"..."+color.END)
+    time.sleep(1)
     try:
         subprocess.check_output(['gpg', '-c', '-crypt-algo='+str(crypt), os.path.splitext(outf)[0]],
     stderr=subprocess.STDOUT)
