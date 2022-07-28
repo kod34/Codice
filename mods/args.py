@@ -11,7 +11,6 @@ requiredNamed.add_argument("-u", "--user", dest="user", help="Username associate
 requiredNamed.add_argument("-l", "--len", dest="len", help="Generated password length")
 requiredNamed.add_argument("-o", "--out", dest="out", help="Output file")
 
-
 args = parser.parse_args()
 
 # Args initiate

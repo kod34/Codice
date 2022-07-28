@@ -45,6 +45,9 @@ required named arguments:
   -u USER, --user USER  Username associated with the generated password
   -l LEN, --len LEN     Generated password length
   -o OUT, --out OUT     Output file
+
+Available encryption algorithms:
+RSA, ELG, DSA, ECDH, ECDSA, EDDSA, IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH, CAMELLIA128, CAMELLIA192, CAMELLIA256
 ```
 ## ✍️ Authors <a name = "authors"></a>
 
